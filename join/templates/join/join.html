@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    회원가입
+    <form method='POST' action='./' enctype="multipart/form-data" >
+        {% csrf_token %}
+        <input type="text" name="user_id"><br>
+        <input type="password" name="user_password"><br>
+        <input type="file" name="user_profile_image"><br>
+        <button>가입</button>
+    </form>
 </body>
 </html>
